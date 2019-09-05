@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+      .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+      </style>
+</head>
+<body>
+
+  <h1>Emmi</h1>
+
+  <br>
+  <div class="container-fluid">    
+      <div class="row">
+          <div class="col-sm-4 ">
+              <div class="dropdown">
+                  <button class="dropbtn">EMMI Proizvodi</button>
+                  <div class="dropdown-content">
+                    <a onmouseenter="myFunction2()" class="nav-item" >MOBILNI UREĐAJI</a>
+                    <a onmouseenter="myFunction3()" class="nav-item" href="#">ALATI, BAŠTOVANSTVO I AUTO OPREMA</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+        </div>
+        
+        <div class="col-sm-8 bg-warning">
+              <div id="demo2">EMMI baner</div>
+        </div>
+      </div>
+    </div>
+<script>
+
+function myFunction2() {
+           
+           document.getElementById("demo2").innerHTML = ' <h3>MOBILNI UREĐAJI</h3> <ul class="nav flex-column"><li class="nav-item"><a class="nav-link" href="#">Laptop i tablet računari</a> <img src="laptop.jpg" class="img-thumbnail" alt="laptop"> </li><li class="nav-item"><a class="nav-link" href="#">Mobilni i fiksni telefoni</a><img src="mobilni.jpg" class="img-thumbnail" alt="laptop"></li></ul>'
+                }
+
+function myFunction3() {
+           
+  document.getElementById("demo2").innerHTML = '<h3>ALATI, BAŠTOVANSTVO I AUTO OPREMA</h3>   <ul class="nav flex-column"><li class="nav-item"><a class="nav-link" href="#">Alati i radionica</a></li><li class="nav-item"><a class="nav-link" href="#">Auto gume</a></li></ul>'
+                }
+
+function myFunction4() {
+           
+           document.getElementById("demo2").innerHTML = '<h3>MOBILNI UREĐAJI</h3>  <ul class="nav flex-column"><li class="nav-item"><a class="nav-link" href="#">Link1</a></li><li class="nav-item"><a class="nav-link" href="#">Link2</a></li></ul>'
+                }
+
+function myFunction5() {
+           
+  document.getElementById("demo2").innerHTML = '<h3>ALATI, BAŠTOVANSTVO I AUTO OPREMA</h3>  <ul class="nav flex-column"><li class="nav-item"><a class="nav-link" href="#">Link3</a></li><li class="nav-item"><a class="nav-link" href="#">Link4</a></li></ul>'
+                }
+       
+          </script>   
+</body>
+</html>
